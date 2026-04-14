@@ -57,7 +57,7 @@ FUNCTION (CHECK_AWS_SDK COMPONENTS RETVAL REASON)
       ENDIF()
       SET_PACKAGE_PROPERTIES(${pkg} PROPERTIES TYPE REQUIRED)
     ENDFOREACH()
-    # Also check for required libraries explicitely - they might be
+    # Also check for required libraries explicitly - they might be
     # missing, even if check above succeeds, e.g when using own copy
     # of zlib
     FOREACH(lib OpenSSL::Crypto ZLIB::ZLIB CURL::libcurl)

@@ -16,7 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1335  USA
 
-# This is a test that runs queries to meassure if the MariaDB cost calculations
+# This is a test that runs queries to measure if the MariaDB cost calculations
 # are reasonable.
 #
 # The following test are run:
@@ -508,7 +508,7 @@ sub index_scan()
 }
 
 # Index scan with 2 key parts
-# This is to check how the number of key parts affects the timeings
+# This is to check how the number of key parts affects the timings
 
 sub index_scan_4_parts()
 {
@@ -949,7 +949,7 @@ sub test_with_gprof()
         $sum+= $cost->{'time'};
     }
     print "Average: " . ($sum/$loops) . "\n";
-    print "Shuting down server\n";
+    print "Shutting down server\n";
     $dbh->do("shutdown") || die "Got error ..";
 }
 

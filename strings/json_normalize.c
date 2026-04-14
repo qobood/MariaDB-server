@@ -33,7 +33,7 @@ enum json_norm_visit_state {
 };
 
 /*
-  The json_norm_frame is used to simulate recurssion using iterative fashion.
+  The json_norm_frame is used to simulate recursion using iterative fashion.
 
   -> val: Which json node we are processing.
   -> index: Which child we are on.

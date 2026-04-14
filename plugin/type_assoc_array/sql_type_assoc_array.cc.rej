@@ -1,0 +1,10 @@
+diff a/plugin/type_assoc_array/sql_type_assoc_array.cc b/plugin/type_assoc_array/sql_type_assoc_array.cc	(rejected hunks)
+@@ -2402,7 +2402,7 @@ bool Type_handler_assoc_array::
+   /*
+     Disallow wrong use of associative_array:
+       CREATE TABLE t1 (a ASSOCIATIVE_ARRAY);
+-      CREATE FUNCTION .. RETURN ASSOCIATEIVE ARRAY ..;
++      CREATE FUNCTION .. RETURN ASSOCIATIVE ARRAY ..;
+   */
+   if (!(tdef= reinterpret_cast<const sp_type_def_composite2*>
+                            (def->get_attr_const_void_ptr(0))))

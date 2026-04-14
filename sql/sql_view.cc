@@ -638,7 +638,7 @@ bool mysql_create_view(THD *thd, TABLE_LIST *views,
   {
     Item *report_item= NULL;
     /* 
-       This will hold the intersection of the priviliges on all columns in the
+       This will hold the intersection of the privileges on all columns in the
        view.
      */
     privilege_t final_priv(VIEW_ANY_ACL);

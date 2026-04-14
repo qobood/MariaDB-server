@@ -150,7 +150,7 @@ DROP FUNCTION f2;
 
 
 --echo #
---echo # IN param + OPEN in p2 + multuple assignments
+--echo # IN param + OPEN in p2 + multiple assignments
 --echo #
 
 DELIMITER /;

@@ -32,7 +32,7 @@ Item_window_func::resolve_window_name(THD *thd)
 
   /* !TODO: Add the code to resolve ref_name in outer queries */ 
   /* 
-    First look for the deinition of the window with 'window_name'
+    First look for the definition of the window with 'window_name'
     in the current select
   */
   List<Window_spec> curr_window_specs= 

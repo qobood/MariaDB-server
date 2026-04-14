@@ -21,7 +21,7 @@
 # data to the client.
 #
 # By changing the variable '$opt_loop_count' value you can make this test
-# easier/harderto your computer to execute. You can also change this value
+# easier/harder for your computer to execute. You can also change this value
 # by using option --loop_value='what_ever_you_like'.
 ##################### Standard benchmark inits ##############################
 

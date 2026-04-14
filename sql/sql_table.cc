@@ -10461,7 +10461,7 @@ static void alter_committed(THD *thd, start_alter_info* info, Master_info *mi)
 
 /**
   process_master_state:- process the info->state recieved from master
-  We will comapre master state with  alter_result
+  We will compare master state with  alter_result
     In the case of ROLLBACK_ALTER alter_result > 0
     In the case of COMMIT_ALTER alter_result == 0
   if the condition is not satisfied we will report error and

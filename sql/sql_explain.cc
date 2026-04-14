@@ -40,7 +40,7 @@ const char *pushed_unit_operation_text[4]=
 
 const char *pushed_derived_text= "PUSHED DERIVED";
 const char *pushed_select_text= "PUSHED SELECT";
-/* See enum ha_parititon::partition_index_scan_method */
+/* See enum ha_partition::partition_index_scan_method */
 const char *partitions_index_scan_method_str[]=
   {NULL, "merge_ordered_scans", "iterate_over_partitions", "both"};
 

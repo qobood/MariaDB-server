@@ -45,7 +45,7 @@
 basedir=
 datadir=
 
-# Default value, in seconds, afterwhich the script should timeout waiting
+# Default value, in seconds, after which the script should timeout waiting
 # for server start.
 # Value here is overridden by value in my.cnf.
 # 0 means don't wait at all

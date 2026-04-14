@@ -41,9 +41,9 @@ The contents of binlog files can be inspected in two ways:
 1. From within the server, using the command `SHOW BINLOG EVENTS`.
 2. Independent of the server, using the `mariadb-binlog` command-line program.
 
-Unlike in the traditional binlog format, one binlog event can be stored in multiple different binlog files, and different parts of individual events can be interleaved with one another in each file. The `mariadb-binlog` program will coalesce the different parts of each event as necessary, so the output of the program is a consistent, non-interleaved stream of events. To obtain a correct seequnce of events across multiple binlog files, all binlog files should be passed to the `mariadb-binlog` program at once in correct order; this ensures that events that cross file boundaries are included in the output exactly once.
+Unlike in the traditional binlog format, one binlog event can be stored in multiple different binlog files, and different parts of individual events can be interleaved with one another in each file. The `mariadb-binlog` program will coalesce the different parts of each event as necessary, so the output of the program is a consistent, non-interleaved stream of events. To obtain a correct sequence of events across multiple binlog files, all binlog files should be passed to the `mariadb-binlog` program at once in correct order; this ensures that events that cross file boundaries are included in the output exactly once.
 
-When using the `--start-position` and `--stop-position` options of `mariadb-binlog`, it is recommended to use GTID positions. The event file offsets used in the tranditional binlog format are not used in the new binlog, and will mostly be reported as zero.
+When using the `--start-position` and `--stop-position` options of `mariadb-binlog`, it is recommended to use GTID positions. The event file offsets used in the traditional binlog format are not used in the new binlog, and will mostly be reported as zero.
 
 The `--binlog-checksum` option is no longer used with the new binlog implementation. The binlog files are always checksummed, with a CRC32 at the end of each page. To have checksum of the data sent on the network between the master and the slave (in addition to the normal TCP checksums), use the `MASTER_SSL` option for `CHANGE MASTER` to make the connection use SSL.
 
@@ -112,7 +112,7 @@ The first page in each binlog file is a file header page, with the following for
 |     64 |  448 | Unused. |
 |    512 |    4 | Extra CRC32. This is used for future expansion to support configurable binlog page size. The header page can be read and checksummed as a 512-byte page, after which the real page size can be determined from the value at offset 4. |
 
-Remaining pages in the file are data pages. Data is structured as a sequence of *records*; each record consists of one or more chunks. A page contains one or more chunks; a record can span multiple pages, but a chunk always fits within one page. Chunks are a minumum of 4 bytes long; any remaining 1-3 bytes of data in a page are filled with the byte 0xff. Unused bytes in a page are set to 0x00.
+Remaining pages in the file are data pages. Data is structured as a sequence of *records*; each record consists of one or more chunks. A page contains one or more chunks; a record can span multiple pages, but a chunk always fits within one page. Chunks are a minimum of 4 bytes long; any remaining 1-3 bytes of data in a page are filled with the byte 0xff. Unused bytes in a page are set to 0x00.
 
 A chunk consists of a *type byte*, two *length bytes* (little endian), and the *data bytes*. The length bytes count only the data bytes, so if the length bytes are 0x0001, then the total size of the chunk is 4 bytes.
 

@@ -36,7 +36,7 @@ ENDMACRO()
 
 # Get CPE ID ( https://en.wikipedia.org/wiki/Common_Platform_Enumeration )
 # for given project name and version
-# CPE prefix are stored with other auxilliary info in the 3rdparty_info.cmake
+# CPE prefix are stored with other auxiliary info in the 3rdparty_info.cmake
 # file
 FUNCTION(SBOM_GET_CPE name version var)
   SET(${var} "" PARENT_SCOPE)

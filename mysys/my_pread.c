@@ -171,7 +171,7 @@ size_t my_pwrite(int Filedes, const uchar *Buffer, size_t Count,
       break;
     my_errno= errno;
     if (writtenbytes != (size_t) -1)
-    {					/* Safegueard */
+    {					/* Safeguard */
       written+=writtenbytes;
       Buffer+=writtenbytes;
       Count-=writtenbytes;

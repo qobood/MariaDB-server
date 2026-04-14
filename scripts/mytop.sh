@@ -1042,7 +1042,7 @@ sub GetData()
         {
             ## To avoid warnings if the OS is not Linux
             open (my $fh, "<", "/proc/loadavg");
-            ## Only the first 3 values are interresting
+            ## Only the first 3 values are interesting
             $l = join(" ", (split /\s+/, <$fh>)[0..2]);
             close $fh;
         }

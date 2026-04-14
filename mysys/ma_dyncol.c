@@ -1155,7 +1155,7 @@ dynamic_column_decimal_store(DYNAMIC_COLUMN *str,
 /**
   Prepare the value to be used as decimal.
 
-  @param value           The value structure which sould be setup.
+  @param value           The value structure which should be setup.
 */
 
 void mariadb_dyncol_prepare_decimal(DYNAMIC_COLUMN_VALUE *value)

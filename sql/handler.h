@@ -2804,7 +2804,7 @@ public:
   */
   const char *unsupported_reason= nullptr;
 
-  /* Alter operations involving parititons are strored here */
+  /* Alter operations involving partitions are stored here */
   ulong partition_flags;
 
   /**
@@ -5670,7 +5670,7 @@ public:
   /**
     Find unique record by index or unique constrain
 
-    @param record        record to find (also will be fillded with
+    @param record        record to find (also will be filled with
                          actual record fields)
     @param unique_ref    index or unique constraint number (depends
                          on how it is implemented by the engine)

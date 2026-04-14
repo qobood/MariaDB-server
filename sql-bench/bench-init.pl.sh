@@ -563,7 +563,7 @@ All benchmarks takes the following options:
   The suffix that is added to the database name in the benchmark output
   filename.  This can be used to run the benchmark multiple times with
   different server options without overwritten old files.
-  When using --fast the suffix is automaticly set to '_fast'.
+  When using --fast the suffix is automatically set to '_fast'.
 
 --random
   Inform test suite that we are generate random initial values for sequence of

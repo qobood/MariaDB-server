@@ -709,7 +709,7 @@ protected:
                        (see TIME_MAX_INTERVAL_HOUR)
 
       If we ever need wider intervals, this code switching between
-      full datetime and interval-only should be rewised.
+      full datetime and interval-only should be revised.
     */
     DBUG_ASSERT(TIME_MAX_INTERVAL_HOUR <= 999999995959);
     /*            (YYMMDDhhmmss) */

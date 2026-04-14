@@ -195,7 +195,7 @@
       it creates special KEYUSE structures for pushable equi-join conditions
       PC. These structures are used to add new elements to the container
       of KEYUSE structures built for T. The specifics of these elements is
-      that they can be ebabled and disabled during the process of choosing
+      that they can be enabled and disabled during the process of choosing
       the best plan for Q.
 
    5. When the optimizer extends a partial join order with a potentially

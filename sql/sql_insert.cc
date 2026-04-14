@@ -2147,7 +2147,7 @@ int Write_record::locate_dup_record()
    fail, so we're better off just deleting the row and trying to insert again.
 
    Additionally we don't use ha_update_row in following cases:
-   * when triggers should be invoked, as it may spoil the intermedite NEW_ROW
+   * when triggers should be invoked, as it may spoil the intermediate NEW_ROW
      representation
    * when we have referenced keys, as there can be different ON DELETE/ON UPDATE
      actions

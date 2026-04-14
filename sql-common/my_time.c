@@ -1339,7 +1339,7 @@ my_system_gmt_sec(const MYSQL_TIME *t_src, long *my_timezone, uint *error_code)
     relevant to QNX.
 
     We are safe with shifts close to MAX_INT32, as there are no known
-    time switches on Febrary 2106 yet :)
+    time switches on February 2106 yet :)
   */
   if ((t->year == TIMESTAMP_MAX_YEAR) && (t->month == 2) && (t->day > 17))
   {

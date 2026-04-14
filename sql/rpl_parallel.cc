@@ -561,7 +561,7 @@ pool_mark_busy(rpl_parallel_thread_pool *pool, THD *thd)
 
   /*
     Wait here while the queue is busy. This is done to make FLUSH TABLES WITH
-    READ LOCK work correctly, without incuring extra locking penalties in
+    READ LOCK work correctly, without incurring extra locking penalties in
     normal operation. FLUSH TABLES WITH READ LOCK needs to lock threads in the
     thread pool, and for this we need to make sure the pool will not go away
     during the operation. The LOCK_rpl_thread_pool is not suitable for

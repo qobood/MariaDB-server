@@ -1438,7 +1438,7 @@ Field *Field_assoc_array::get_element_field() const
 
 
 /*
-  We willl create 3 subfields in the associative array:
+  We will create 3 subfields in the associative array:
    1. The key field
    2. The value field
    3. The value assign field

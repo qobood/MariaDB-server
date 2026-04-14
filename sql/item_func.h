@@ -4270,7 +4270,7 @@ public:
         SELECT 1=(SELECT a FROM t1) FROM seq_1_to_5;
       Item_singlerow_subselect pretends to be a scalar,
       so its type_handler() returns the type handler of the column "a".
-      (*) This is according to the SQL scandard, which says:
+      (*) This is according to the SQL standard, which says:
           The declared type of a <scalar subquery> is the declared
           type of the column of QE (i.e. its query expression).
       In the above SELECT statement Arg_comparator calls a scalar comparison

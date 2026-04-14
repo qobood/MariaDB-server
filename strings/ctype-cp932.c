@@ -14,7 +14,7 @@
    along with this program; if not, write to the Free Software
    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1335  USA */
 
-/* This file is for cp932 charaset (Windows Japanese),
+/* This file is for cp932 charset (Windows Japanese),
    and created based on ctype-sjis.c file  */
 
 #include "strings_def.h"

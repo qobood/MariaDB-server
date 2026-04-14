@@ -522,7 +522,7 @@ bool trans_xa_end(THD *thd)
    progress blocks FTWRL) and also by MDL_BACKUP_WAIT_COMMIT.
    We allow FLUSHer to COMMIT; we assume FLUSHer knows what it does.
 
-   Note that the function sets thd->backup_lock on sucess. The caller needs
+   Note that the function sets thd->backup_lock on success. The caller needs
    to reset thd->backup_commit_lock before returning!
 */
 

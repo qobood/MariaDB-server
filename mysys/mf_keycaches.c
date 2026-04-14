@@ -79,11 +79,11 @@ KEY_CACHE *multi_key_cache_search(uchar *key, uint length,
   Assosiate a key cache with a key
 
 
-  SYONOPSIS
+  SYNOPSIS
     multi_key_cache_set()
     key				key (path to table etc..)
     length			Length of key
-    key_cache			cache to assococite with the table
+    key_cache			cache to associate with the table
 
   NOTES
     This can be used both to insert a new entry and change an existing

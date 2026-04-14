@@ -2856,7 +2856,7 @@ struct wait_for_commit
   {
     /*
       Do the check inline, so only the wakeup case takes the cost of a function
-      call for every commmit.
+      call for every commit.
 
       Note that the check is done without locking. It is the responsibility of
       the user of the wakeup facility to ensure that no waiters can register
@@ -7564,7 +7564,7 @@ public:
   /*
     Returns the client query fragment starting at the first character
     of the leftmost identifier and ending at after the last character
-    of the rightmist identifier.
+    of the rightmost identifier.
   */
   const Lex_ident_cli_st &pos() const
   {
@@ -8193,7 +8193,7 @@ void thd_enter_cond(MYSQL_THD thd, mysql_cond_t *cond, mysql_mutex_t *mutex,
    condition.
 
    @param thd      The thread entering the condition, NULL means current thread
-   @param stage    The process message, ususally this should be the old process
+   @param stage    The process message, usually this should be the old process
                    message before calling @f thd_enter_cond
    @param src_function The caller source function name
    @param src_file The caller source file name

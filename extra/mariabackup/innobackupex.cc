@@ -633,7 +633,7 @@ You can download full text of the license on http://www.gnu.org/licenses/gpl-2.0
 
 	puts("innobackupex - Non-blocking backup tool for InnoDB, XtraDB and HailDB databases\n\
 \n\
-SYNOPOSIS\n\
+SYNOPSIS\n\
 \n\
 innobackupex [--compress] [--compress-threads=NUMBER-OF-THREADS] [--compress-chunk-size=CHUNK-SIZE]\n\
              [--include=REGEXP] [--user=NAME]\n\

@@ -74,7 +74,7 @@ protected:
     to run any prepare_ordered() respectively commit_ordered() methods in
     participating handlers.
 
-    They must be called using suitable thread syncronisation to ensure that
+    They must be called using suitable thread synchronisation to ensure that
     they are each called in the correct commit order among all
     transactions. However, it is only necessary to call them if the
     corresponding flag passed to log_and_order is set (it is safe, but not

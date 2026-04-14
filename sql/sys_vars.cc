@@ -770,7 +770,7 @@ static Sys_var_on_access<Sys_var_set,
 Sys_binlog_create_tmptable_format(
        "create_tmp_table_binlog_formats",
        "The binary logging formats under which the master will log "
-       "CREATE TEMPORARY statments to the binary log. If CREATE TEMPORARY "
+       "CREATE TEMPORARY statements to the binary log. If CREATE TEMPORARY "
        "is not logged, all usage of the temporary table will be logged in "
        "ROW format. Allowed values are STATEMENT or MIXED,STATEMENT",
        SESSION_VAR(create_temporary_table_binlog_formats),
@@ -3130,7 +3130,7 @@ static Sys_var_ulong Sys_optimizer_trace_max_mem_size(
 
 static Sys_var_mybool Sys_optimizer_record_context(
     "optimizer_record_context",
-    "Controls storing of optmizer context of all the tables "
+    "Controls storing of optimizer context of all the tables "
     "that are referenced in a query",
     SESSION_VAR(optimizer_record_context), CMD_LINE(OPT_ARG),
     DEFAULT(FALSE));
@@ -3288,7 +3288,7 @@ static bool fix_read_only(sys_var *self, THD *thd, enum_var_type type)
   fix_read_only() compares them and runs needed operations for the
   transition (especially when transitioning from false to true) and
   synchronizes both booleans in the end.
-  The FALSE and TRUE options are only for compatability with old config files.
+  The FALSE and TRUE options are only for compatibility with old config files.
   They will be mapped to OFF and ON respectively.
 */
 

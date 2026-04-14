@@ -33875,7 +33875,7 @@ my_uca_2bytes_item_weight_cpy2(MY_UCA_2BYTES_ITEM *dst,
 
 
 /*
-  Contatenate weights of two ASCII characters if they fit together,
+  Concatenate weights of two ASCII characters if they fit together,
   otherwise mark the byte pair as not applicable for optimization.
 */
 static void
@@ -34312,7 +34312,7 @@ typedef uint32 my_compound2_t;
 /*
   Helper functions to handle compound weight values.
 
-  Make a compond value from weight[0] and weight[1].
+  Make a compound value from weight[0] and weight[1].
 */
 static inline my_compound2_t compound2_make(const uint16 *weights)
 {
@@ -34482,7 +34482,7 @@ init_weight_level(MY_CHARSET_LOADER *loader, CHARSET_INFO *cs,
 
   /*
     Calculate maximum lengths for the pages which will be overwritten.
-    Mark pages that will be otherwriten as NULL.
+    Mark pages that will be overwriten as NULL.
     We'll allocate their own memory.
   */
   for (i= 0; i < rules->nrules; i++)

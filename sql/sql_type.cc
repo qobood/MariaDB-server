@@ -1991,7 +1991,7 @@ Type_collection_std::aggregate_for_comparison(const Type_handler *ha,
 
 
 /**
-  Aggregate data type handler for LEAST/GRATEST.
+  Aggregate data type handler for LEAST/GREATEST.
   aggregate_for_min_max() is close to aggregate_for_comparison(),
   but tries to preserve the exact type handler for string, int and temporal
   data types (instead of converting to super-types).
@@ -4765,7 +4765,7 @@ bool Type_handler_int_result::
 
 /*
   This method handles general purpose integer data types
-    TINYINT, SHORTINT, MEDIUNINT, BIGINT.
+    TINYINT, SHORTINT, MEDIUMINT, BIGINT.
   It switches to DECIMAL in case if a mismatch in unsigned_flag found.
 
   Note, we should fix this to ignore all items with
@@ -7324,7 +7324,7 @@ Type_handler_int_result::Item_type_std_attributes_generic(const Item *item)
     Item (e.g. for subselect), we need to add one extra character for
     a possible sign.
     The code below works both for optimized Item_int and other item kinds.
-    It evaluates max_length from the precision and the optinal sign length.
+    It evaluates max_length from the precision and the optional sign length.
   */
   DBUG_ASSERT(item->decimals == 0);
   uint32 max_length= item->decimal_precision() + (item->unsigned_flag ? 0 : 1);
@@ -9418,7 +9418,7 @@ int Type_handler_timestamp_common::cmp_native(const Native &a,
 {
   /*
     Optimize a simple case:
-    Either both timeatamp values have the same fractional precision,
+    Either both timestamp values have the same fractional precision,
     or both values are zero datetime '0000-00-00 00:00:00.000000',
   */
   if (a.length() == b.length())

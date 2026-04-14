@@ -5946,7 +5946,7 @@ int MYSQL_BIN_LOG::update_log_index(LOG_INFO* log_info, bool need_update_threads
   @param need_mutex
   @param need_update_threads If we want to update the log coordinates of
                              all threads. False for relay logs, true otherwise.
-  @param reclaimeed_log_space If not null, increment this variable to
+  @param reclaimed_log_space If not null, increment this variable to
                               the amount of log space freed
 
   @note
@@ -7809,7 +7809,7 @@ void THD::binlog_prepare_for_row_logging()
 }
 
 /**
-   Write annnotated row event (the query) if needed
+   Write annotated row event (the query) if needed
 */
 
 bool THD::binlog_write_annotated_row(bool use_trans_cache)
@@ -11621,7 +11621,7 @@ void MYSQL_BIN_LOG::close(uint exiting)
         /*
           Queue a close on the current GTID index.
           Important that this is queued _before_ the checkpoint request is sent
-          (and thus before chechpoint notifications can be queued); this way, if
+          (and thus before checkpoint notifications can be queued); this way, if
           we crash before the GTID index is synced to disk, the checkpoint will
           still be pending and the binlog file will be scanned during crash
           recovery and the GTID index recovered.
@@ -13300,7 +13300,7 @@ int TC_LOG_BINLOG::unlog_xa_prepare(THD *thd, bool all)
     {
       /* an empty XA-prepare event group is logged */
       rc= write_empty_xa_prepare(thd, cache_mngr); // normally gains need_unlog
-      trans_register_ha(thd, true, &binlog_tp, 0); // do it for future commmit
+      trans_register_ha(thd, true, &binlog_tp, 0); // do it for future commit
       thd->ha_data[binlog_tp.slot].ha_info[1].set_trx_read_write();
     }
     if (rw_count == 0 || !cache_mngr->need_unlog)
@@ -15095,7 +15095,7 @@ void wsrep_register_binlog_handler(THD *thd, bool trx)
     cache_mngr->trx_cache.set_prev_position(pos);
 
     /*
-      Set callbacks in order to be able to call commmit or rollback.
+      Set callbacks in order to be able to call commit or rollback.
     */
     if (trx)
       trans_register_ha(thd, TRUE, &binlog_tp, 0);

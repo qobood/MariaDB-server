@@ -139,7 +139,7 @@ unsigned char *compr_int_write_le_unaligned_buffer(unsigned char *p, uint64_t v)
   // Encode 1-7 as 0-6, and encode 8,9 both as 8.
   len-= (len >> 3);
 
-  // Write the (up to) 9 bytes, prefering redundant write to conditional jump.
+  // Write the (up to) 9 bytes, preferring redundant write to conditional jump.
   *(uint64_t *)p= len | (v << 3);
   *(p+8)= v >> 63;
   return p + bytes;

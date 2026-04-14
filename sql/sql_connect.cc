@@ -1617,7 +1617,7 @@ THD *CONNECT::create_thd(THD *thd)
     /* reuse old thd */
     thd->reset_for_reuse();
     /*
-      reset tread_id's, but not thread_dbug_id's as the later isn't allowed
+      reset thread_id's, but not thread_dbug_id's as the later isn't allowed
       to change as there is already structures in thd marked with the old
       value.
     */

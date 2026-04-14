@@ -160,7 +160,7 @@ fedora-clang:
     # @TODO: Don't use -j without the limit of 2 on Gitlab.com as builds just
     # get stuck when running multi-proc and out of memory, see https://jira.mariadb.org/browse/MDEV-25968
     - make test
-    # - make test-force  # mysql-test-runner takes too long, run MTr in a separate job instead
+    # - make test-force  # mysql-test-runner takes too long, run MTR in a separate job instead
     - *rpm_listfiles
     - mkdir ../rpm; mv *.rpm ../rpm
   artifacts:

@@ -332,7 +332,7 @@ process::process (const char* cmd, const char* type, char** env)
         goto cleanup_pipes;
     }
 
-    /* make sure that no signlas are masked in child process */
+    /* make sure that no signals are masked in child process */
     sigset_t sigmask_empty; sigemptyset(&sigmask_empty);
     err_= posix_spawnattr_setsigmask(&attr, &sigmask_empty);
     if (err_)

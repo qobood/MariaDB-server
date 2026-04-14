@@ -830,7 +830,7 @@ bool Item_field::add_field_to_set_processor(void *arg)
 
 
 /**
-   Rename fields in an expression to new field name as speficied by ALTER TABLE
+   Rename fields in an expression to new field name as specified by ALTER TABLE
 */
 
 bool Item_field::rename_fields_processor(void *arg)
@@ -6405,7 +6405,7 @@ bool Item_field::check_ora_join(Item **reference, bool outer_ref_fixed)
       my_error(ER_INVALID_USE_OF_ORA_JOIN_OUTER_REF, MYF(0), name.str);
       return TRUE;
     }
-    // Keep flag about oracle join if view fied was resolved
+    // Keep flag about oracle join if view field was resolved
     if (reference[0] != this) // resolved to a new field
       reference[0]->copy_flags(this, item_with_t::ORA_JOIN);
   }
@@ -7572,7 +7572,7 @@ static uint nr_of_decimals(const char *str, const char *end)
     return NOT_FIXED_DEC;
   /*
     QQ:
-    The number of decimal digist in fact should be (str - decimal_point - 1).
+    The number of decimal digits in fact should be (str - decimal_point - 1).
     But it seems the result of nr_of_decimals() is never used!
 
     In case of 'e' and 'E' nr_of_decimals returns NOT_FIXED_DEC.
@@ -10465,7 +10465,7 @@ bool Item_default_value::tie_field(THD *thd)
   */
   enum_column_usage save_column_usage= thd->column_usage;
   /*
-    Fields which has defult value could be read, so it is better hide system
+    Fields which has default value could be read, so it is better hide system
     invisible columns.
   */
   thd->column_usage= COLUMNS_WRITE;

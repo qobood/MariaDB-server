@@ -54,7 +54,7 @@ const char *VER= "15.2";
 /* Buffer to hold 'version' and 'version_comment' */
 static char *server_version= NULL;
 
-/* Array of options to pass to libemysqld */
+/* Array of options to pass to libmysqld */
 #define MAX_SERVER_ARGS               64
 
 #include "sql_string.h"

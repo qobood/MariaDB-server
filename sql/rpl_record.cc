@@ -344,7 +344,7 @@ int unpack_row(const rpl_group_info *rgi, TABLE *table, uint const master_cols,
   const table_def *tabledef= rpl_data.tabledef;
   const TABLE *conv_table= rpl_data.conv_table;
   uint conv_table_idx= 0;
-  DBUG_PRINT("rpl_record", ("Table data: tabldef: %p, conv_table: %p",
+  DBUG_PRINT("rpl_record", ("Table data: tabledef: %p, conv_table: %p",
                             tabledef, conv_table));
 
   /*

@@ -450,7 +450,7 @@ public:
   it is a subject to later resolution, when the context
   character set becomes known in the end of the CREATE statement:
   - either after the explicit table level CHARACTER SET, like in (1a,3a,3c)
-  - or by the inhereted database level CHARACTER SET, like in (1b,3b)
+  - or by the inherited database level CHARACTER SET, like in (1b,3b)
 
   Resolution happens in Type_handler::Column_definition_prepare_stage1().
 */

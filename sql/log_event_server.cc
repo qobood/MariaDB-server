@@ -3061,7 +3061,7 @@ Gtid_log_event::get_size() const noexcept
     However, clang MSAN, when used without -fno-sanitize-memory-param-retval,
     complains that passing undefined value as function parameter is undefined
     behaviour (even when value is not used by the function). So here we
-    break the pattern somehwat with fl_xa to work-around this overzealous use
+    break the pattern somewhat with fl_xa to work-around this overzealous use
     of MSAN.
   */
   bool fl_xa= flags2 & (FL_PREPARED_XA | FL_COMPLETED_XA);
@@ -8211,7 +8211,7 @@ int Rows_log_event::find_row(rpl_group_info *rgi)
     rpl_row_tabledefs.test specifies that
     if the extra field on the slave does not have a default value
     and this is okay with Delete or Update events.
-    Todo: fix wl3228 hld that requires defauls for all types of events
+    Todo: fix wl3228 hld that requires defaults for all types of events
   */
   
   restore_record(table, s->default_values);

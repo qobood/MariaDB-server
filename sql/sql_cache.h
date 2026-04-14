@@ -532,7 +532,7 @@ protected:
 
   /* Table key generation */
   static uint filename_2_table_key (char *key, const char *filename,
-				    uint32 *db_langth);
+				    uint32 *db_length);
 
   enum Cache_try_lock_mode {WAIT, TIMEOUT, TRY};
   bool try_lock(THD *thd, Cache_try_lock_mode mode= WAIT);

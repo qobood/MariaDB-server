@@ -192,7 +192,7 @@ public:
   uint persistent_variable_count() const
   {
     /*
-      The top level sp_pcontext contains function and procedure paramenters.
+      The top level sp_pcontext contains function and procedure parameters.
       In case of a PACKAGE BODY there are no parameters, the context for
       parameters still exists, with no variables.
       PACKAGE BODY variables are in m_root_parsing_ctx->child_context(0).

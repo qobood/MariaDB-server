@@ -6849,7 +6849,7 @@ Field *find_field_in_table_sef(TABLE *table, const Lex_ident_column &name)
 
   RETURN VALUES
     0			If error: the found field is not unique, or there are
-                        no sufficient access priviliges for the found field,
+                        no sufficient access privileges for the found field,
                         or the field is qualified with non-existing table.
     not_found_field	The function was called with report_error ==
                         (IGNORE_ERRORS || IGNORE_EXCEPT_NON_UNIQUE) and a
@@ -7974,7 +7974,7 @@ err:
     Apply the procedure 'store_top_level_join_columns' to each of the
     top-level table references of the FROM clause. Adjust the list of tables
     for name resolution - context->first_name_resolution_table to the
-    top-most, lef-most NATURAL/USING join.
+    top-most, left-most NATURAL/USING join.
 
   IMPLEMENTATION
     Notice that the table references in 'from_clause' are in reverse

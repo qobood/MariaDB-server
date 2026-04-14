@@ -2228,7 +2228,7 @@ sub Get_grant_from_host {
 # ===========================================================
 # sub Default_Access_Rights():
 #  return (a reference to) a hash which holds all default
-#  priviliges currently defined in the grant-tables.
+#  privileges currently defined in the grant-tables.
 # ===========================================================
 sub Default_Access_Rights {
     my %right = ();

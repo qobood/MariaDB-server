@@ -6803,7 +6803,7 @@ exists_complementing_null_row(MY_BITMAP *keys_to_complement)
   if (!count_columns_with_nulls)
   {
     /*
-      If there are both NULLs and non-NUll values in the outer reference, and
+      If there are both NULLs and non-NULL values in the outer reference, and
       the subquery contains no NULLs, a complementing NULL row cannot exist.
     */
     return FALSE;

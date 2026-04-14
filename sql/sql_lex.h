@@ -4620,7 +4620,7 @@ public:
 
   /*
     Generate "increment" instructions followed by a jump to the
-    condition test in the beginnig of the loop.
+    condition test in the beginning of the loop.
     "Increment" depends on the loop type and can be:
     - index:= index + 1;       -- integer range loops
     - index:= index - 1;       -- integer range reverse loops

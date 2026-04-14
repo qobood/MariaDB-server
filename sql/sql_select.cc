@@ -8588,7 +8588,7 @@ double hash_join_fanout(JOIN *join, JOIN_TAB *tab, table_map remaining_tables,
     Our current solution is to be very conservative and use selectivity
     of one column with the lowest avg_frequency.
 
-    In the future, we should an approach that cautiosly takes into account
+    In the future, we should an approach that cautiously takes into account
     multiple KEYUSEs either multiply by number of equalities or by sqrt
     of the second most selective equality.
   */
@@ -14003,7 +14003,7 @@ inline void add_cond_and_fix(THD *thd, Item **e1, Item *e2)
       @code
       SELECT A.f2 FROM t1 LEFT JOIN t2 A ON A.f2 = f1
       WHERE A.f3=(SELECT MIN(f3) FROM  t2 C WHERE A.f4 = C.f4) OR A.f3 IS NULL;
-      @endocde
+      @endcode
       Here condition A.f3 IS NOT NULL is going to be added to the WHERE
       condition of the embedding query.
       Another example:
@@ -30630,7 +30630,7 @@ bool JOIN::rollup_init()
    into temporary tables whenever the result of the ROLLUP
    operation has to be written into a temporary table, e.g. when
    ROLLUP is used together with DISTINCT in the SELECT list.
-   Usually when creating temporary tables for a intermidiate
+   Usually when creating temporary tables for a intermediate
    result we do not include fields for constant expressions.
 
    @retval
@@ -32764,7 +32764,7 @@ void st_select_lex::print_hints(THD *thd,
       thd->lex->opt_hints_global->print(thd, str);
   }
 
-  // If no hints were added, then rollback the previouly added header.
+  // If no hints were added, then rollback the previously added header.
   if (str->length() <= len_before_hints)
   {
     str->length(len_before_hints - header.length);

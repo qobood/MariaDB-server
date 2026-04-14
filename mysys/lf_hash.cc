@@ -84,7 +84,7 @@ typedef struct {
              1 - found
     if callback:
              0 - ok
-             1 - error (callbck returned 1)
+             1 - error (callback returned 1)
 */
 static int l_find(LF_SLIST **head, CHARSET_INFO *cs, uint32 hashnr,
                  const uchar *key, size_t keylen, CURSOR *cursor, LF_PINS *pins,

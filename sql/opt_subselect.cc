@@ -2111,7 +2111,7 @@ restore_tl_and_exit:
 }
 
 
-const int SUBQERY_TEMPTABLE_NAME_MAX_LEN= 20;
+const int SUBQUERY_TEMPTABLE_NAME_MAX_LEN= 20;
 
 static void create_subquery_temptable_name(LEX_STRING *str, uint number)
 {
@@ -2158,7 +2158,7 @@ static bool convert_subq_to_jtbm(JOIN *parent_join,
 
   *remove_item= TRUE;
 
-  if (!(tbl_alias.str= thd->calloc(SUBQERY_TEMPTABLE_NAME_MAX_LEN)) ||
+  if (!(tbl_alias.str= thd->calloc(SUBQUERY_TEMPTABLE_NAME_MAX_LEN)) ||
       !(jtbm= alloc_join_nest(thd))) //todo: this is not a join nest!
   {
     DBUG_RETURN(TRUE);
@@ -5748,7 +5748,7 @@ int rewrite_to_index_subquery_engine(JOIN *join)
      - in order to set a more efficient engine, the optimizer needs to both
        decide to remove GROUP BY, *and* select one of the JT_[EQ_]REF[_OR_NULL]
        access methods, *and* loose scan should be more expensive or
-       inapliccable. When is that possible?
+       inappliccable. When is that possible?
      - Consider expanding the applicability of this rewrite for loose scan
        for group by queries.
   */
@@ -6598,7 +6598,7 @@ bool setup_degenerate_jtbm_semi_joins(JOIN *join,
     execute_degenerate_jtbm_semi_join().
 
     Otherwise the method creates a temporary table in which the subquery
-    of the jtbm semi join will be materialied.
+    of the jtbm semi join will be materialized.
 
     The function saves the equalities between all pairs of the expressions
     from the left part of the IN subquery predicate and the corresponding

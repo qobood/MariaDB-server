@@ -43,7 +43,7 @@
  * Some transaction information was exposed, with the `trx_latency` (for the current or last transaction depending on `trx_state`), `trx_state` (ACTIVE, COMMITTED, ROLLED BACK), and `trx_autocommit` (YES/NO) columns
 * A new `metrics` view has been added. On 5.7 this provides a union view of the performance_schema.global_status and information_schema.innodb_metrics tables, along with P_S memory and the current time, as a single metrics output. On 5.6 it provides a union view of the information_schema.global_status and information_schema.innodb_metrics tables, along with the current time. (**Contributed by Jesper Wisborg Krogh**)
 * New `session`/`x$session` views have been added, which give the same output as the `processlist` view counterparts, but filtered to only show foreground connections (**Contributed by Morgan Tocker**)
-* A new `session_ssl_status` view was added, which shows the SSL version, ciper and session resuse statistics for each connection (**Contributed by Daniël van Eeden**)
+* A new `session_ssl_status` view was added, which shows the SSL version, cipher and session reuse statistics for each connection (**Contributed by Daniël van Eeden**)
 * A new `schema_auto_increment_columns` view was added, that shows statistics on each auto_incrment within the instance, including the `auto_increment_ratio`, so you can easily monitor how full specific auto_increment columns are (**Contributed by Shlomi Noach**)
 * A new `schema_redundant_indexes` view was added, that shows indexes made redundant (or duplicated) by other more dominant indexes. Also includes the the helper view `x$schema_flattened_keys`. (**Contributed by Shlomi Noach**)
 * New `schema_table_lock_waits`/`x$schema_table_lock_waits` views have been added, which show any sessions that are waiting for table level metadata locks, and the sessions that are blocking them. Resolves Git Issue #57, inspired by the suggestion from Daniël van Eeden
@@ -210,7 +210,7 @@ Various changes were made to allow better generation of integration sql files:
    * `ps_setup_disable_consumers(<LIKE string>)` allows disabling any consumers matching the LIKE string.
    * `ps_setup_enable_consumers(<LIKE string>)` allows enabling any consumers matching the LIKE string.
 
-* Added procedures to show both enabled and disbled consumers or instruments individually, these are more useful for tooling than the `ps_setup_show_enabled`/`ps_setup_show_disabled` procedures which show all configuration in multiple result sets.  (**Contributed by the MySQL QA Team**)
+* Added procedures to show both enabled and disabled consumers or instruments individually, these are more useful for tooling than the `ps_setup_show_enabled`/`ps_setup_show_disabled` procedures which show all configuration in multiple result sets.  (**Contributed by the MySQL QA Team**)
    * `ps_setup_show_disabled_consumers` shows only disabled consumers.
    * `ps_setup_show_disabled_instruments` shows only disabled instruments.
    * `ps_setup_show_enabled_consumers` shows only enabled consumers.

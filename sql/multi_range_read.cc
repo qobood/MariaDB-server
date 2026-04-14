@@ -903,7 +903,7 @@ int Mrr_ordered_rndpos_reader::init(handler *h_arg,
   rowid and return.
 
   When this function returns, either rowid buffer is not empty, or the source
-  of lookup keys (i.e. ranges) is exhaused.
+  of lookup keys (i.e. ranges) is exhausted.
   
   @retval 0      OK, the next portion of rowids is in the buffer,
                  properly ordered

@@ -4783,7 +4783,7 @@ bool set_part_state(Alter_info *alter_info, partition_info *tab_part_info,
 
 
 /**
-  @brief Check if partition is exchangable with table by checking table options
+  @brief Check if partition is exchangeable with table by checking table options
 
   @param table_create_info Table options from table.
   @param part_elem         All the info of the partition.

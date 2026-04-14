@@ -496,7 +496,7 @@ int mem_root_allocate_dynamic(MEM_ROOT *mem_root,
     /* copy old elements first. */
     memcpy(new_ptr, array->buffer,
               array->max_element * array->size_of_element);
-    /* set the remainging memory to 0. */
+    /* set the remaining memory to 0. */
     memset(new_ptr+((array->max_element) * array->size_of_element), 0,
            array->alloc_increment*array->size_of_element);
     array->buffer= new_ptr;

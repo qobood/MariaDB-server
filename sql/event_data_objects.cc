@@ -1511,7 +1511,7 @@ end:
          Wsrep DDL replication is triggered inside Events::drop_event(),
          and here we need to prepare the THD so that DDL replication is
          possible, essentially it requires setting sql_command to
-         SQLCOMM_DROP_EVENT, we will switch sql_command for the duration
+         SQLCOM_DROP_EVENT, we will switch sql_command for the duration
          of DDL replication only.
       */
       const enum_sql_command sql_command_save= thd->lex->sql_command;

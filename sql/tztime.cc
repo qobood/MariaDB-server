@@ -916,7 +916,7 @@ a  */
     /*
       We will pass (t->day - shift) to sec_since_epoch(), and
       want this value to be a positive number, so we shift
-      only dates > max_day (to avoid owerflow).
+      only dates > max_day (to avoid overflow).
     */
     shift= 2;
   }
@@ -2748,7 +2748,7 @@ static const char *default_timezone_dir= "/usr/share/zoneinfo/";
 
 static void print_usage(void)
 {
-  fprintf(stdout, "Create SQL commands for loading system timezeone data for "
+  fprintf(stdout, "Create SQL commands for loading system timezone data for "
           "MariaDB\n\n");
   fprintf(stdout, "Usage:\n");
   fprintf(stdout, " %s [options] timezonedir\n", my_progname);

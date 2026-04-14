@@ -1222,7 +1222,7 @@ update_line (old, new, current_line, omax, nmax, inv_botlin)
 	  size_t ret;
 
 	  /* This fixes only double-column characters, but if the wrapped
-	     character comsumes more than three columns, spaces will be
+	     character consumes more than three columns, spaces will be
 	     inserted in the string buffer. */
 	  if (_rl_wrapped_line[current_line] > 0)
 	    _rl_clear_to_eol (_rl_wrapped_line[current_line]);

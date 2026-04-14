@@ -117,7 +117,7 @@ char *str2int(register const char *src, register int radix, long int lower,
   /*  Skip leading zeros so that we never compute a power of radix
       in scale that we won't have a need for.  Otherwise sticking
       enough 0s in front of a number could cause the multiplication
-      to overflow when it neededn't.
+      to overflow when it needn't.
       */
   start=(char*) src;
   while (*src == '0') src++;

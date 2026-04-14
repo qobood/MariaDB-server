@@ -2367,7 +2367,7 @@ static void rocksdb_backup_checkpoint(ds_ctxt *ds_data)
 }
 
 /*
-  Copies #rocksdb directory to the $rockdb_data_dir, on copy-back
+  Copies #rocksdb directory to the $rocksdb_data_dir, on copy-back
 */
 static void rocksdb_copy_back(ds_ctxt *ds_data) {
 	if (access(ROCKSDB_BACKUP_DIR, 0))

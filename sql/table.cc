@@ -1801,7 +1801,7 @@ public:
 */
 
 #ifdef WITH_PARTITION_STORAGE_ENGINE
-static bool change_to_partiton_engine(plugin_ref *se_plugin)
+static bool change_to_partition_engine(plugin_ref *se_plugin)
 {
   LEX_CSTRING name= { STRING_WITH_LEN("partition") };
   /*
@@ -2113,7 +2113,7 @@ int TABLE_SHARE::init_from_binary_frm_image(THD *thd, bool write,
       else if (str_db_type_length == 9 &&
                !strncmp((char *) next_chunk + 2, "partition", 9))
       {
-        if (change_to_partiton_engine(&se_plugin))
+        if (change_to_partition_engine(&se_plugin))
           goto err;
       }
 #endif
@@ -2157,7 +2157,7 @@ int TABLE_SHARE::init_from_binary_frm_image(THD *thd, bool write,
             share->mysql_version >= 50600 && share->mysql_version <= 50799)
         {
           share->keep_original_mysql_version= 1;
-          if (change_to_partiton_engine(&se_plugin))
+          if (change_to_partition_engine(&se_plugin))
             goto err;
         }
       }

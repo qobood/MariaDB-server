@@ -82,7 +82,7 @@ static void reset_console_cp(void)
   /*
     We try not to call SetConsoleCP unnecessarily, to workaround a bug on
     older Windows 10 (1803), which could switch truetype console fonts to
-    raster, eventhough SetConsoleCP would be a no-op (switch from UTF8 to UTF8).
+    raster, even though SetConsoleCP would be a no-op (switch from UTF8 to UTF8).
   */
   if (GetConsoleCP() != orig_console_cp)
     SetConsoleCP(orig_console_cp);

@@ -202,7 +202,7 @@ MY_FUNCTION_NAME(scanner_next)(my_uca_scanner *scanner,
     scanner->page= currwc >> 8;
     scanner->code= currwc & 0xFF;
 
-    /* If weight page for w[0] does not exist, then calculate algoritmically */
+    /* If weight page for w[0] does not exist, then calculate algorithmically */
     if (!(wpage= param->level->weights[scanner->page]))
       SCANNER_NEXT_RETURN(my_uca_scanner_next_implicit(scanner, param),
                           ignorable_nchars + 1);

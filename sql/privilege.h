@@ -675,7 +675,7 @@ constexpr privilege_t PRIV_STMT_SHOW_PROCESSLIST= PROCESS_ACL;
   This is needed as the 'host' and 'db' table is missing a few privileges
 */
 
-/* Privileges that need to be reallocated (in continous chunks) */
+/* Privileges that need to be reallocated (in continuous chunks) */
 constexpr privilege_t DB_CHUNK0 (COL_DML_ACLS | CREATE_ACL | DROP_ACL);
 constexpr privilege_t DB_CHUNK1 (GRANT_ACL | REFERENCES_ACL | INDEX_ACL | ALTER_ACL);
 constexpr privilege_t DB_CHUNK2 (CREATE_TMP_ACL | LOCK_TABLES_ACL);

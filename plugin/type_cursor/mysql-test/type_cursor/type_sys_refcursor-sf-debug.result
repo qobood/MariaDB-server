@@ -138,7 +138,7 @@ stage	curs	refs
 DROP FUNCTION f1;
 DROP FUNCTION f2;
 #
-# IN param + OPEN in p2 + multuple assignments
+# IN param + OPEN in p2 + multiple assignments
 #
 CREATE PROCEDURE p2()
 BEGIN

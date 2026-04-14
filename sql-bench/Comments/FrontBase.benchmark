@@ -44,7 +44,7 @@ The crash-me program itself was also needed to be tuned quite a lot
 for FB. There were also some bugs/lacking features in the crash-me
 program, which are now fixed to the new version.
 
-After we finally got the limits, we runned the benchmarks.
+After we finally got the limits, we ran the benchmarks.
 
 benchmarks:
 

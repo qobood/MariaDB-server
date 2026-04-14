@@ -2976,7 +2976,7 @@ bool compute_window_func(THD *thd,
   return ret;
 }
 
-/* Make a list that is a concation of two lists of ORDER elements */
+/* Make a list that is a concatenation of two lists of ORDER elements */
 
 static ORDER* concat_order_lists(MEM_ROOT *mem_root, ORDER *list1, ORDER *list2)
 {

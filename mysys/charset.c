@@ -481,7 +481,7 @@ my_error_reporter my_charset_error_reporter= default_reporter;
 
 /**
   Wrappers for memory functions my_malloc (and friends)
-  with C-compatbile API without extra "myf" argument.
+  with C-compatible API without extra "myf" argument.
 */
 static void *
 my_once_alloc_c(size_t size)

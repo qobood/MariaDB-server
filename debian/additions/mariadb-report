@@ -1382,7 +1382,7 @@ Hits          @>>>>>>    @>>>>>/s
 make_short($stats{'Qcache_hits'}), t($stats{'Qcache_hits'})
 Inserts       @>>>>>>    @>>>>>/s
 make_short($stats{'Qcache_inserts'}), t($stats{'Qcache_inserts'})
-Insrt:Prune @>>>>>>:1    @>>>>>/s
+Insert:Prune @>>>>>>:1    @>>>>>/s
 make_short($qc_ip_r), t($stats{'Qcache_inserts'} - $stats{'Qcache_lowmem_prunes'})
 Hit:Insert  @>>>>>>:1
 $qc_hi_r, t($qc_hi_r)

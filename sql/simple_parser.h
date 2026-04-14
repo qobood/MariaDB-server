@@ -80,7 +80,7 @@
   - class item_numconvfunc.cc in item_numconvfunc.cc
   - class Optimizer_hint_parser in opt_hints_parser.h
 
-  The parser class should derive from the tokeniner class
+  The parser class should derive from the tokenizer class
   and from the clas Parser_templates. The parser class should implement:
   - a method empty_token()
   - a method null_token()
@@ -148,7 +148,7 @@ protected:
   };
 
   /*
-    OR_CONTAINER* to be passed as a CONTANER parameter to the
+    OR_CONTAINER* to be passed as a CONTAINER parameter to the
     ORxC parsing templates. OR_CONTAINER* derives from parts (components),
     which store the data parsed by alternative branches in the grammar.
     When one part is initialized from some data, all other parts are
@@ -1059,7 +1059,7 @@ protected:
 
 
   /*
-    A list with at least MIN_COUNT elements (typlically 0 or 1),
+    A list with at least MIN_COUNT elements (typically 0 or 1),
     with or without a token separator between elements:
 
       list ::= element [ {, element }... ]       // with a separator
@@ -1079,7 +1079,7 @@ protected:
     - LIST_CONTAINER - The class where the list parsed data is accumulated to
     - ELEMENT_PARSER - The element parser
     - SEP            - The ID of the separator token between elements.
-                       If the ID is eqoal to null_token().id(),
+                       If the ID is equal to null_token().id(),
                        then the list is not separated. See above.
     - MIN_COUNT      - The mininum number of elements. Usually 1.
                        0 means that the list is optional:  [ list ]

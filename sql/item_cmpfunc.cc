@@ -2770,7 +2770,7 @@ Item_func_nullif::fix_length_and_dec(THD *thd)
       l_expr needs a special treatment, as it's referenced by both
       args[0] and args[2] initially.
 
-      args[2] is used to return the value. Afrer all transformations
+      args[2] is used to return the value. After all transformations
       (e.g. in fix_length_and_dec(), equal field propagation, etc)
       args[2] points to a an Item which preserves the exact data type and
       attributes (e.g. collation) of the original l_expr.
@@ -2921,7 +2921,7 @@ Item_func_nullif::fix_length_and_dec(THD *thd)
     - args[0] points to Item_func_conv_charset
     - args[0]->args[0] is equal to m_args0
     - args[1] points to Item_func_set_collation
-    - args[2] points is eqial to m_args0
+    - args[2] points is equal to m_args0
 
     In this case we remember and reuse m_arg0 during EXECUTE time as args[2].
 

@@ -65,7 +65,7 @@ typedef enum
 
 
 /*
-  Copies an incomplete character, lef-padding it with 0x00 bytes.
+  Copies an incomplete character, left-padding it with 0x00 bytes.
   
   @param cs           Character set
   @param dst          The destination string

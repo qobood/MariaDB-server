@@ -624,7 +624,7 @@ longlong myfunc_int(UDF_INIT *initid __attribute__((unused)), UDF_ARGS *args,
     case INT_RESULT:			/* Add numbers */
       val += *((longlong*) args->args[i]);
       break;
-    case REAL_RESULT:			/* Add numers as longlong */
+    case REAL_RESULT:			/* Add numbers as longlong */
       val += (longlong) *((double*) args->args[i]);
       break;
     default:

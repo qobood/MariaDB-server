@@ -680,7 +680,7 @@ inline void bubble_sort(List<T> *list_to_sort,
 
 
 /*
-  A simple intrusive list which automaticly removes element from list
+  A simple intrusive list which automatically removes element from list
   on delete (for THD element)
 */
 

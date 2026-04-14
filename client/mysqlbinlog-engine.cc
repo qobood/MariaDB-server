@@ -51,7 +51,7 @@ static uint32_t binlog_page_size;
 
    - The main purpose of the code inside InnoDB is to very efficiently allow
      reading of binlog data concurrently with active writing threads and
-     concurrently with page fifo asynchroneous flushing. In contrast, the
+     concurrently with page fifo asynchronous flushing. In contrast, the
      purpose of the mysqlclient code is to have a simple stand-alone command
      line reader of the files. These two use cases are sufficiently
      different, and the code frameworks used for storage/innobase/ and

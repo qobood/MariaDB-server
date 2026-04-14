@@ -1242,7 +1242,7 @@ class JOIN_TAB_SCAN_MRR: public JOIN_TAB_SCAN
   /* Flag to be passed to the MRR interface */
   uint mrr_mode;
 
-  /* MRR buffer assotiated with this join cache */
+  /* MRR buffer associated with this join cache */
   HANDLER_BUFFER mrr_buff;
 
   /* Shall initialize the MRR buffer */

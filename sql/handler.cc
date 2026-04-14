@@ -2930,7 +2930,7 @@ struct xarecover_complete_arg
   When both A,B do not hold - which is the semisync slave recovery
   case - the decision is to commit.
 
-  Returns  true  as commmit decision
+  Returns  true  as commit decision
            false as rollback one
 */
 static bool xarecover_decide_to_commit(xid_recovery_member* member,

@@ -31,7 +31,7 @@
   them from the buffer directly into output.
 
   The method uses the functions of the select_handle interface to do this.
-  It also employes plus some helper functions to create the needed temporary
+  It also employs plus some helper functions to create the needed temporary
   table and to send rows from the temporary table into output.
   The constructor of the class gets the select_handler interface as a parameter.
 */

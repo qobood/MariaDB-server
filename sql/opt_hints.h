@@ -57,7 +57,7 @@
   proper select numbers are assigned in LEX::fix_first_select_number()
   which is called after parsing has been finished.
 
-  Beause of that, LEX::handle_parsed_optimizer_hints_in_last_select() builds a
+  Because of that, LEX::handle_parsed_optimizer_hints_in_last_select() builds a
   todo list for resolution and LEX::resolve_optimizer_hints() does the hint
   resolution.
 
@@ -421,7 +421,7 @@ private:
   */
   void append_hint_type(String *str, opt_hints_enum type);
   /**
-    Print warnings abount unfixed hints in this hint collection
+    Print warnings about unfixed hints in this hint collection
 
     @param thd             Pointer to THD object
   */

@@ -4291,7 +4291,7 @@ bool change_password(THD *thd, LEX_USER *user)
     row-based replication.  The flag will be reset at the end of the
     statement.
     This has to be handled here as it's called by set_var.cc, which is
-    not automaticly handled by sql_parse.cc
+    not automatically handled by sql_parse.cc
   */
   save_binlog_format= thd->set_current_stmt_binlog_format_stmt();
 
@@ -4440,7 +4440,7 @@ int acl_set_default_role(THD *thd,
     row-based replication.  The flag will be reset at the end of the
     statement.
     This has to be handled here as it's called by set_var.cc, which is
-    not automaticly handled by sql_parse.cc
+    not automatically handled by sql_parse.cc
   */
   save_binlog_format= thd->set_current_stmt_binlog_format_stmt();
 
@@ -9224,7 +9224,7 @@ privilege_t get_table_grant(THD *thd, TABLE_LIST *table)
 
 
 /*
-  Determine the access priviliges for a field.
+  Determine the access privileges for a field.
 
   SYNOPSIS
     get_column_grant()
@@ -9238,7 +9238,7 @@ privilege_t get_table_grant(THD *thd, TABLE_LIST *table)
     The procedure may also modify: grant->grant_table and grant->version.
 
   RETURN
-    The access priviliges for the field db_name.table_name.field_name
+    The access privileges for the field db_name.table_name.field_name
 */
 
 privilege_t get_column_grant(THD *thd, GRANT_INFO *grant,

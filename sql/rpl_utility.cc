@@ -342,7 +342,7 @@ bool event_checksum_test(uchar *event_buf, size_t event_len,
       DBUG_ASSERT(fd_alg == BINLOG_CHECKSUM_ALG_CRC32 || fd_alg == 0);
       DBUG_ASSERT(alg == BINLOG_CHECKSUM_ALG_CRC32);
       /*
-        Complile time guard to watch over  the max number of alg
+        Compile time guard to watch over the max number of alg
       */
       compile_time_assert(BINLOG_CHECKSUM_ALG_ENUM_END <= 0x80);
     }

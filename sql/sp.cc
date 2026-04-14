@@ -2460,7 +2460,7 @@ extern "C" const uchar *sp_sroutine_key(const void *ptr, size_t *plen, my_bool)
 
   @todo
     When we will got rid of these accesses on re-executions we will be
-    able to allocate memory for hash elements in non-persitent arena
+    able to allocate memory for hash elements in non-persistent arena
     and directly use key values from sp_head::m_sroutines sets instead
     of making their copies.
 

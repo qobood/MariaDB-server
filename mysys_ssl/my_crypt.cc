@@ -232,7 +232,7 @@ public:
     */
     if (!EVP_CIPHER_CTX_encrypting(ctx))
     {
-      /* encrypted string must contain authenticaton tag (see MDEV-11174) */
+      /* encrypted string must contain authentication tag (see MDEV-11174) */
       if (slen < MY_AES_BLOCK_SIZE)
         return MY_AES_BAD_DATA;
       slen-= MY_AES_BLOCK_SIZE;

@@ -459,7 +459,7 @@ end:
       The logic for comparing transid are as follows:
       Keys with have a transid have lowest bit in the rowidt. This means that
       if we are comparing a key with a transid with another key that doesn't
-      have a tranid, we must reset the lowest bit for both keys.
+      have a transid, we must reset the lowest bit for both keys.
 
       When we have transid, the keys are compared in transid order.
       A key without a transid is regared to be smaller than a key with

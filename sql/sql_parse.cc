@@ -54,7 +54,7 @@
 #include "sql_test.h"         // mysql_print_status
 #include "sql_select.h"       // handle_select, mysql_select,
                               // mysql_explain_union
-#include "sql_cursor.h"       // Select_materialzie
+#include "sql_cursor.h"       // Select_materialize
 #include "sql_load.h"         // mysql_load
 #include "sql_servers.h"      // create_servers, alter_servers,
                               // drop_servers, servers_reload
@@ -2056,7 +2056,7 @@ dispatch_command_return dispatch_command(enum enum_server_command command,
     }
     table_list.init_one_table(&db, (LEX_CSTRING*) &table_name, 0, TL_READ);
     /*
-      Init TABLE_LIST members necessary when the undelrying
+      Init TABLE_LIST members necessary when the underlying
       table is view.
     */
     table_list.select_lex= thd->lex->first_select_lex();

@@ -125,7 +125,7 @@ static bool static_test_load= TRUE;
 
   @param chain     variables are linked into chain for mysql_add_sys_var_chain()
   @param name_arg  the name of the variable. Must be 0-terminated and exist
-                   for the liftime of the sys_var object. @sa my_option::name
+                   for the lifetime of the sys_var object. @sa my_option::name
   @param comment   shown in mysqld --help, @sa my_option::comment
   @param flags_arg or'ed flag_enum values
   @param off       offset of the global variable value from the

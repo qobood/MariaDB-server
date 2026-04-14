@@ -120,7 +120,7 @@ mysql_socket_invalid()
 
 /**
   Set socket descriptor and address.
-  @param socket nstrumented socket
+  @param socket instrumented socket
   @param addr unformatted socket address
   @param addr_len length of socket address
 */

@@ -78,7 +78,7 @@ my_base64_needed_decoded_length(int length_of_encoded_data)
   Note: We add line separators every 76 characters.
   
   Note: The output string is properly padded with the '=' character,
-  so the length of the output string is always divisable by 4.
+  so the length of the output string is always divisible by 4.
 */
 
 int

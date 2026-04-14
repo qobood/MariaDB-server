@@ -264,7 +264,7 @@ private:
 
 /*
   the spatial object has to be represented as a set of
-  simple polygones and polylines to be sent to the slicescan.
+  simple polygons and polylines to be sent to the slicescan.
 
   Gcalc_shape_transporter class and his descendants are used to
   simplify storing the information about the shape into necessary structures.

@@ -4431,7 +4431,7 @@ trg_event_type Statement::current_trg_event()
     both on handling DML statements INSERT/UPDATE/DELETE and DDL statement
     CREATE TRIGGER. For the last one, m_running_trgs is empty since the
     method push_current_trg_event() is run only on processing triggers, not on
-    thier creation. So take care about this case.
+    their creation. So take care about this case.
   */
   if (unlikely(m_running_trgs.elements() == 0))
     return TRG_EVENT_MAX;

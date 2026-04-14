@@ -33,7 +33,7 @@
  This allow buffers. The region is pagesize-aligned (via VirtualAlloc allocation)
 
  We use smallish IO buffers, 256 bytes is probably large enough for most of
- the queries. Larger buffers could have funny effects(thread hogginng)
+ the queries. Larger buffers could have funny effects(thread hogging)
  on threadpool scheduling in case client is using protocol pipelining.
 
  Also note, that even in an unlikely situation where cache runs out of buffers,

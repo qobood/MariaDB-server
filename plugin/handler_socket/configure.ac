@@ -126,7 +126,7 @@ AC_DEFUN([CONFIG_OPTION_MYSQL],[
 
 HANDLERSOCKET_SUBDIRS="libhsclient"
 AC_ARG_ENABLE(handlersocket_server,
-  [  --enable-handlersocket-server    build HandlerSocket plugin (defalut=yes)])
+  [  --enable-handlersocket-server    build HandlerSocket plugin (default=yes)])
 if test "$enable_handlersocket_server" != "no"; then
   CONFIG_OPTION_MYSQL
   HANDLERSOCKET_SUBDIRS="libhsclient handlersocket client"

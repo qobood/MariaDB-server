@@ -60,7 +60,7 @@ struct st_opt_hint_info opt_hint_info[]=
 
 /**
   Prefix for system generated query block name.
-  Used in information warning in EXPLAIN oputput.
+  Used in information warning in EXPLAIN output.
 */
 
 const LEX_CSTRING sys_qb_prefix=  {"select#", 7};
@@ -646,7 +646,7 @@ bool Opt_hints_table::fix_key_hints(TABLE *table)
           (like ORDER_INDEX(t1);
     - it has a list of index names, and at least one of listed
       index names is resolved successfully. So, NO_INDEX(t1 bad_idx) does not
-      become a table-level hint NO_INDEX(t1) if `bad_idx` cannnot be resolved.
+      become a table-level hint NO_INDEX(t1) if `bad_idx` can not be resolved.
   */
   for (opt_hints_enum
            hint_type : { INDEX_HINT_ENUM, JOIN_INDEX_HINT_ENUM,

@@ -20,7 +20,7 @@
   length records. A read isn't allowed to go over file-length. A read is ok
   if it ends at file-length and next read can try to read after file-length
   (and get a EOF-error).
-  Possibly use of asyncronic io.
+  Possibly use of asynchronous io.
   macros for read and writes for faster io.
   Used instead of FILE when reading or writing whole files.
   One can change info->pos_in_file to a higher value to skip bytes in file if

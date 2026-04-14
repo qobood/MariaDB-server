@@ -1,4 +1,4 @@
-Speciella användbara nya string-rutiner:
+Speciella anvï¿½ndbara nya string-rutiner:
 
   bcmp(s1, s2, len) returns 0 if the "len" bytes starting at "s1" are
   identical to the "len" bytes starting at "s2", non-zero if they are
@@ -32,10 +32,10 @@ Speciella användbara nya string-rutiner:
   A better implementation of the UNIX ctype(3) library.
   Notes:   global.h should be included before ctype.h
     - Se efter i filen \c\local\include\m_ctype.h
-    - Används istället för ctype.h för att klara internationella karakterer.
+    - Anvï¿½nds istï¿½llet fï¿½r ctype.h fï¿½r att klara internationella karakterer.
 
   m_string.h
-  Använd instället för string.h för att supporta snabbare strängfunktioner.
+  Anvï¿½nd instï¿½llet fï¿½r string.h fï¿½r att supporta snabbare strï¿½ngfunktioner.
 
   strintstr(src, from, pat) looks for an instance of pat in src
   backwards from pos from.  pat is not a regex(3) pattern, it is a literal
@@ -55,7 +55,7 @@ Speciella användbara nya string-rutiner:
     rather than
 	strcat(strcat(strcat(strcpy(s,a),b),c),d).
     strcat returns the old value of s.
-	- Använd inte strcat, använd strmov (se ovan).
+	- Anvï¿½nd inte strcat, anvï¿½nd strmov (se ovan).
 
   strcend(s, c) returns a pointer to the  first  place  in  s	where  c
   occurs,  or a pointer to the end-null of s if c does not occur in s.
@@ -140,4 +140,4 @@ I mysys:
  get strings in rigth order.
 
  string strcfind(str,search)
- find string in another with no case_sensivity
+ find string in another with no case_sensitivity

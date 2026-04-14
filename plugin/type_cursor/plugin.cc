@@ -274,7 +274,7 @@ public:
     END;
 
     The referenced object m_statement_cursors.at(5) is not necessarily
-    destructed/modified every time when a referece SP variable pointing to the
+    destructed/modified every time when a reference SP variable pointing to the
     object is destructed, as every object can have more than one references
     declared in different BEGIN..END blocks, like in the chart above.
 
@@ -439,7 +439,7 @@ public:
                                                                  table_flags);
   }
 
-  /*** Basic data type feautures ***/
+  /*** Basic data type features ***/
 
   const Type_collection *type_collection() const override
   {
@@ -752,7 +752,7 @@ public:
       - in the package body initialization section
       Let's return an error on the top level, like Oracle does.
 
-      Let's also disasallow SYS_REFCURSOR in stored aggregate functions.
+      Let's also disallow SYS_REFCURSOR in stored aggregate functions.
     */
     if ((type == COLUMN_DEFINITION_ROUTINE_LOCAL &&
          thd->lex->spcont->scope() == sp_pcontext::PACKAGE_BODY_SCOPE) ||

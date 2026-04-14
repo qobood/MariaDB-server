@@ -31,7 +31,7 @@ bool sp_condition_value::equals(const sp_condition_value *cv) const
         a EXCEPTION;
         b EXCEPTION;
       BEGIN
-        RAUSE a;
+        RAISE a;
       EXCEPTION
         WHEN a THEN RETURN 'a0';
         WHEN a THEN RETURN 'a1';

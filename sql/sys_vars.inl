@@ -1220,7 +1220,7 @@ public:
 /*
   Optimizer costs
   Stored as cost factor (1 cost = 1 ms).
-  Given and displayed as microsconds (as most values are very small)
+  Given and displayed as microseconds (as most values are very small)
 */
 
 class Sys_var_optimizer_cost: public Sys_var_double
@@ -1759,7 +1759,7 @@ public:
 };
 
 /**
-  Class for variables that containg a list of plugins.
+  Class for variables that containing a list of plugins.
   Currently this is used only for @@gtid_pos_auto_create_engines
 
   Backing store: plugin_ref
@@ -2416,7 +2416,7 @@ public:
 
 /**
   Special implementation for transaction isolation, that
-  distingushes between
+  distinguishes between
 
   SET GLOBAL TRANSACTION ISOLATION (stored in global_system_variables)
   SET SESSION TRANSACTION ISOLATION (stored in thd->variables)

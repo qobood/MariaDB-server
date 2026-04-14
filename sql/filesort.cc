@@ -671,7 +671,7 @@ Filesort::make_sortorder(THD *thd, JOIN *join, table_map first_table_bit)
          first->get_item_equal())
     {
       /*
-        Ok, this is the case descibed just above. Get the first element of the
+        Ok, this is the case described just above. Get the first element of the
         multi-equality.
       */
       Item_equal *item_eq= first->get_item_equal();

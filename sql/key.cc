@@ -232,7 +232,7 @@ void key_restore(uchar *to_record, const uchar *from_key, KEY *key_info,
         keys yet anyway, so it's difficult to find any sense to
         restore the part of a record.
         Maybe this branch is to be removed, but now we
-        have to ignore GCov compaining.
+        have to ignore GCov complaining.
       */
       uint blob_length= uint2korr(from_key);
       Field_blob *field= (Field_blob*) key_part->field;
@@ -683,7 +683,7 @@ int key_tuple_cmp(KEY_PART_INFO *part, const uchar *key1, const uchar *key2,
   @param  used_key_part  number of key parts used for the key
   @param  key            pointer to the buffer with the key value
 
-  @datails
+  @details
   When hashing we should take special care only of:
   1. NULLs (and keyparts which can be null so one byte reserved for it);
   2. Strings for which we have to take into account their collations

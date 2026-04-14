@@ -313,7 +313,7 @@ struct MasterPos
   ulong pos;
 } master_pos;
 
-/* if set, all results are concated and compared against this file */
+/* if set, all results are concatenated and compared against this file */
 const char *result_file_name= 0;
 
 typedef struct
@@ -2201,7 +2201,7 @@ int cat_file(DYNAMIC_STRING* ds, const char* filename)
       else
         p++;
     }
-    /* Output any chars that migh be left */
+    /* Output any chars that might be left */
     *p= 0;
     replace_dynstr_append_mem(ds, start, p-start);
   }
@@ -4389,7 +4389,7 @@ void do_chmod_file(struct st_command *command)
   command	called command
 
   DESCRIPTION
-  fiile_exist <file_name>
+  file_exist <file_name>
   Check if file <file_name> exists
 */
 

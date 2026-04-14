@@ -1127,7 +1127,7 @@ int imerge_list_or_tree(RANGE_OPT_PARAM *param,
       param           Context info for the operation
       merges   IN/OUT List of imerges to push the range part of 'tree' into
       tree            SEL_TREE whose range part is to be pushed into imerges
-      replace         if the pushdow operation for a imerge is a success
+      replace         if the pushdown operation for an imerge is a success
                       then the original imerge is replaced for the result
                       of the pushdown 
 
@@ -4537,7 +4537,7 @@ int find_used_partitions_imerge(PART_PRUNE_PARAM *ppar, SEL_IMERGE *imerge)
       * recursively walks the SEL_ARG* tree collecting partitioning "intervals"
       * finds the partitions one needs to use to get rows in these intervals
       * marks these partitions as used.
-    The next session desribes the process in greater detail.
+    The next session describes the process in greater detail.
  
   IMPLEMENTATION
     TYPES OF RESTRICTIONS THAT WE CAN OBTAIN PARTITIONS FOR    
@@ -8794,7 +8794,7 @@ SEL_TREE *Item_func_in::get_func_row_mm_tree(RANGE_OPT_PARAM *param,
 
   NOTES
     If the WHERE condition contains a predicate (fi op c),
-    then not only SELL_TREE for this predicate is built, but
+    then not only SEL_TREE for this predicate is built, but
     the trees for the results of substitution of fi for
     each fj belonging to the same multiple equality as fi
     are built as well.
@@ -9834,7 +9834,7 @@ SEL_ARG *Field::stored_field_make_mm_leaf_bounded_int(RANGE_OPT_PARAM *param,
     (b) (unsigned_int [> | >=] negative_constant) == TRUE
     In case (a) the condition is false for all values, and in case (b) it
     is true for all values, so we can avoid unnecessary retrieval and condition
-    testing, and we also get correct comparison of unsinged integers with
+    testing, and we also get correct comparison of unsigned integers with
     negative integers (which otherwise fails because at query execution time
     negative integers are cast to unsigned if compared with unsigned).
    */
@@ -14487,7 +14487,7 @@ cost_group_min_max(TABLE* table, KEY *index_info, uint used_key_parts,
     Clustered PK indexes are not present in table->covering_keys (one can say
     a clustered index is always covering as it has all table's fields in it).
     This function checks if the set of columns in the index definition
-    PRIMARY KEY(col1, ... colN) is covering for the quey.
+    PRIMARY KEY(col1, ... colN) is covering for the query.
 */
 
 static bool index_is_clustered_covering(const TABLE *table, uint keynr)

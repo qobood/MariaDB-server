@@ -89,7 +89,7 @@ static void set_exitcode(int code);
   @param name   Name to unescape
   @param buf    Buffer to store result
   @param sz     Size of buffer
-  @return       length of result string, or 0 on error or decodin
+  @return       length of result string, or 0 on error or decoding
                 not needed
 */
 static uint decode_fs_safe_name(const char *name, char *buf, size_t sz)

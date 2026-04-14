@@ -791,7 +791,7 @@ static bool create_ddl_log()
 
 /**
   Open ddl log and initialise ddl log variables
-  Create a backuip of of
+  Create a backup of of
 */
 
 bool ddl_log_initialize()

@@ -502,7 +502,7 @@ private:
 
   /*
     Generate instructions to set a single cursor placeholder
-    from a USING clause expresion:
+    from a USING clause expression:
       OPEN c USING 1;
   */
   bool add_set_cursor_placeholder(THD *thd,

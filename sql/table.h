@@ -3002,7 +3002,7 @@ struct TABLE_LIST
 
     slave_fk_event_map is filled on the slave side with bitmaps value
     representing row-based event operation to help find and prelock
-    possible FK constrain-related child tables.
+    possible FK constraint-related child tables.
   */
   uint8 trg_event_map, slave_fk_event_map;
   /* TRUE <=> this table is a const one and was optimized away. */

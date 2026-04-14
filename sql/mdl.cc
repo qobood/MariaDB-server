@@ -1327,7 +1327,7 @@ end:
 
     ticket->m_lock is valid only when this method returns either TAL_ACQUIRED
     or TAL_WAIT. In other cases caller doesn't hold references to this lock,
-    which means it can be detroyed. Caller is expected to dispose ticket
+    which means it can be destroyed. Caller is expected to dispose ticket
     immediately anyway.
 
     Certain lock requests can be served by multi-instance scalable fast lanes.

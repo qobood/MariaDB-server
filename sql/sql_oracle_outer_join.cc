@@ -99,7 +99,7 @@
     select *
     from (t1 left join t2 on t2.col=t1.col) left join t3 on t1.col=t3.col
 
-  or an equvalent query:
+  or an equivalent query:
 
     select *
     from (t1 left join t3 on t3.col=t1.col) left join t2 on t1.col=t2.col
@@ -178,7 +178,7 @@
 
   == 2.2.3 Building the TABLE_LIST structure ==
   Then, we walk through the table_pos objects via {table_pos::next} edges and
-  create a parsed LEFT JOIN data sructure.
+  create a parsed LEFT JOIN data structure.
 
   For a chain of t1-t2-t3-t4-t5 we would create:
 
@@ -1054,7 +1054,7 @@ bool setup_oracle_join(THD *thd, Item **conds,
   // parts of WHERE moved to ON (original ONs will be fixed later)
   for (i= 0; i < n_tables; i++)
   {
-    // we have to count becaust this lists are included in other lists
+    // we have to count because these lists are included in other lists
     List_iterator<Item> it(*all_fields);
     Item *item;
     for (uint j= 0; j < tab[i].on_conds.elements && (item= it++); j++)

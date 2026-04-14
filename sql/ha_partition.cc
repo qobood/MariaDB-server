@@ -2616,7 +2616,7 @@ reg_query_cache_dependant_table(THD *thd,
   DBUG_ENTER("ha_partition::reg_query_cache_dependant_table");
   qc_engine_callback engine_callback;
   ulonglong engine_data;
-  /* ask undelying engine */
+  /* ask underlying engine */
   if (!file->register_query_cache_table(thd, engine_key,
                                         engine_key_len,
                                         &engine_callback,
@@ -9168,7 +9168,7 @@ int ha_partition::open_read_partitions(char *name_buff, size_t name_buff_size)
 
     /*
       TODO: we can close some opened partitions if they're not
-      used in the query. It probably should be syncronized with the
+      used in the query. It probably should be synchronized with the
       table_open_cache value.
 
       if (is_open && !should_be_open)
@@ -9398,7 +9398,7 @@ static int end_keyread_cb(handler* h, void *unused)
     used from UPDATE statements. It is not used from DELETE statements
     with ORDER BY and LIMIT but it is used in normal scan loop in DELETE
     statements. The reason here is that DELETE's in MyISAM doesn't move
-    existings data rows.
+    existing data rows.
 
     It is also set in copy_data_between_tables when scanning the old table
     to copy over to the new table.

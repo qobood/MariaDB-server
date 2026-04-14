@@ -365,7 +365,7 @@ public:
   ulong until_log_name_extension;   
   /* 
      Cached result of comparison of until_log_name and current log name
-     -2 means unitialised, -1,0,1 are comarison results 
+     -2 means uninitialised, -1,0,1 are comparison results 
   */
   enum 
   { 

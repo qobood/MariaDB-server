@@ -424,7 +424,7 @@ set_echo_compat
 
 echo
 echo "NOTE: MariaDB is secure by default. Running this script is mostly"
-echo "      unecessary and it will likely be removed in a future release,"
+echo "      unnecessary and it will likely be removed in a future release,"
 echo "      but it is for now preserved for backwards compatibility."
 echo
 echo "Enter root user password or leave blank:"

@@ -11224,7 +11224,7 @@ function_call_generic:
             LEX *lex= Lex;
             if (using_udf_functions)
             {
-              // find_udf expectes a 0-terminated string
+              // find_udf expects a 0-terminated string
               const Lex_ident_sys sysname(thd, &$1);
               if (sysname.is_null())
                 MYSQL_YYABORT; // EOM

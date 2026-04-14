@@ -550,7 +550,7 @@ rl_yank_pop (count, key)
     }
 }
 
-/* Yank the COUNTh argument from the previous history line, skipping
+/* Yank the COUNTth argument from the previous history line, skipping
    HISTORY_SKIP lines before looking for the `previous line'. */
 static int
 rl_yank_nth_arg_internal (count, ignore, history_skip)

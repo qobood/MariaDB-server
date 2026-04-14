@@ -26,7 +26,7 @@ static char *find_file_in_path(char *to,const char *name);
 	   then path is taken from "_".
 	   If filename doesn't contain a path append MY_BASEDIR_VERSION or
 	   MY_BASEDIR if defined, else append "/my/running".
-	   own_path_name_part is concatinated to result.
+	   own_path_name_part is concatenated to result.
 	   my_path puts result in to and returns to */
 
 char * my_path(char * to, const char *progname,

@@ -1039,7 +1039,7 @@ static void link_into_queue(KEYCACHE_WQUEUE *wqueue,
     DBUG_ASSERT(last->next->prev == &last->next);
     /* Add backlink to previous element */
     thread->prev=      last->next->prev;
-    /* Fix first in list to point backwords to current */
+    /* Fix first in list to point backwards to current */
     last->next->prev=  &thread->next;
     /* Next should point to the first element in list */
     thread->next=      last->next;

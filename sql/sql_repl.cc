@@ -662,7 +662,7 @@ static my_bool log_in_use_callback(THD *thd, st_log_in_use *arg)
   @return 0  Not used
   @return 1  A slave is reading from the log
   @return 2  There are less than 'min_connected' slaves that
-             has recived the log.
+             has received the log.
 */
 
 int log_in_use(const char* log_name, uint min_connected)
@@ -2137,7 +2137,7 @@ is_until_reached(binlog_send_info *info, ulong *ev_offset,
     break;
   case GTID_UNTIL_STOP_AFTER_TRANSACTION:
     if (event_type != XID_EVENT && event_type != XA_PREPARE_LOG_EVENT &&
-        (event_type != QUERY_EVENT ||    /* QUERY_COMPRESSED_EVENT would never be commmit or rollback */
+        (event_type != QUERY_EVENT ||    /* QUERY_COMPRESSED_EVENT would never be commit or rollback */
          !Query_log_event::peek_is_commit_rollback
          ((uchar*) info->packet->ptr() + *ev_offset,
           info->packet->length() - *ev_offset,
@@ -2378,7 +2378,7 @@ send_event_to_slave(binlog_send_info *info, Log_event_type event_type,
     return NULL;
   case GTID_SKIP_TRANSACTION:
     if (event_type == XID_EVENT || event_type == XA_PREPARE_LOG_EVENT ||
-        (event_type == QUERY_EVENT && /* QUERY_COMPRESSED_EVENT would never be commmit or rollback */
+        (event_type == QUERY_EVENT && /* QUERY_COMPRESSED_EVENT would never be commit or rollback */
          Query_log_event::peek_is_commit_rollback((uchar*) packet->ptr() +
                                                   ev_offset,
                                                   len - ev_offset,
@@ -3464,7 +3464,7 @@ static int send_engine_events(binlog_send_info *info, LOG_INFO* linfo)
       /*
         In the engine-implemented binlog, format description event is (only)
         written to mark a master server restart; this is used by the slave to
-        know that the master discarded temporary tabls at this point. So don't
+        know that the master discarded temporary tables at this point. So don't
         send such event until we have reached our GTID starting position, so
         that the slave will not mistakenly discard such temporary tables too
         early.
@@ -4952,10 +4952,10 @@ show_engine_binlog_events(THD* thd, Protocol *protocol, LEX_MASTER_INFO *lex_mi)
     the engine, but which really means "start of the file".
 
     So here we have this ugly hack where "4" means the same as "0". Well,
-    use of offsets is discourated anyway in the new binlog (in favour of
+    use of offsets is discouraged anyway in the new binlog (in favour of
     GTID), and "4" is not going to be a valid position most likely, or if
     it is, "0" will be equivalent (at least it is so for the InnoDB binlog
-    implementation.
+    implementation).
   */
   if (pos == 4)
     pos= 0;

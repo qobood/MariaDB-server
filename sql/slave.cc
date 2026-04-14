@@ -534,7 +534,7 @@ slave_deadlock_handler(void *arg __attribute__((unused)))
   Start the slave deadlock handler thread.
 
   This thread is used to kill worker thread transactions during parallel
-  replication, when a storage engine attempts to take an errorneous
+  replication, when a storage engine attempts to take an erroneous
   conflicting lock that would cause a deadlock. Killing is done
   asynchroneously, as the kill may not be safe within the context of a
   callback from inside storage engine locking code.
@@ -6574,7 +6574,7 @@ dbug_gtid_accept:
     DBUG_EXECUTE_IF("kill_slave_io_before_commit",
                     {
                       if ((uchar)buf[EVENT_TYPE_OFFSET] == XID_EVENT ||
-                          ((uchar)buf[EVENT_TYPE_OFFSET] == QUERY_EVENT &&    /* QUERY_COMPRESSED_EVENT would never be commmit or rollback */
+                          ((uchar)buf[EVENT_TYPE_OFFSET] == QUERY_EVENT &&    /* QUERY_COMPRESSED_EVENT would never be commit or rollback */
                            Query_log_event::peek_is_commit_rollback(buf,
                                                                     event_len,
                                                                     checksum_alg)))
@@ -6847,7 +6847,7 @@ dbug_gtid_accept:
         (!mi->last_queued_gtid_standalone &&
          ((uchar)buf[EVENT_TYPE_OFFSET] == XID_EVENT ||
           (uchar)buf[EVENT_TYPE_OFFSET] == XA_PREPARE_LOG_EVENT ||
-          ((uchar)buf[EVENT_TYPE_OFFSET] == QUERY_EVENT &&    /* QUERY_COMPRESSED_EVENT would never be commmit or rollback */
+          ((uchar)buf[EVENT_TYPE_OFFSET] == QUERY_EVENT &&    /* QUERY_COMPRESSED_EVENT would never be commit or rollback */
            Query_log_event::peek_is_commit_rollback(buf, event_len,
                                                     checksum_alg))))))
     {

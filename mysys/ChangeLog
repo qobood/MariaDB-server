@@ -27,13 +27,13 @@ Wed Mar  3 00:54:20 1993  Michael Widenius  (monty@bitch)
 
 Wed Oct 28 02:10:56 1992  Michael Widenius  (monty@bitch)
 
-	* Enabled ASNYNC_IO on SUN.
+	* Enabled ASYNC_IO on SUN.
 
 Mon Aug 31 23:51:13 1992  Michael Widenius  (monty@bitch)
 
 	* Changed tree_insert to return element if ok.
 	* Added new define tree_set_pointer().
-	* Chagned delete_queue() to not free if allready freed.
+	* Changed delete_queue() to not free if allready freed.
 
 Mon Aug 17 01:46:36 1992  Michael Widenius  (monty@bitch)
 
@@ -144,7 +144,7 @@ Sat Feb 24 02:54:35 1990  Monty  (monty at monty)
 
 Sun Feb 11 17:55:58 1990  David Axmark  (davida at isil)
 
-	* Concatenated libarys my_func and my_sys because of to much
+	* Concatenated libraries my_func and my_sys because of to much
 	  crosswise dependencies.
 	* Fixed varagrs code in mf_fixadr.c
 

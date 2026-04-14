@@ -479,7 +479,7 @@ err:
 
   Models for datetime, used by TO_CHAR/TO_DATE.
 
-  Let's reserve this rarely used Unicode block to encode format charactes:
+  Let's reserve this rarely used Unicode block to encode format characters:
     U+E000 - U+F8FF Private Use Area
 
   Other characters in the format array mean them literally.
@@ -595,7 +595,7 @@ uint oracle_year_2000_handling(uint year)
                         This value should be prefilled with the
                         current date in case format does not
                         have all date parts.
-  @parrm locale         Used to get day and month names
+  @param locale         Used to get day and month names
   @param data_time_type Type of string. Used for error messages
   @param fuzzy_date     If partial dates are allowed
   @param give_error     Generate a warning/error
@@ -687,7 +687,7 @@ extract_oracle_date_time(THD *thd, uint16 *format_ptr,
           {
             /*
               Oracle tochar allows values without punctuation characters for
-              numercial values
+              numerical values
             */
             continue;
           }
@@ -4880,7 +4880,7 @@ bool get_next_argument(const char **pos_arg, const char *end,
     if (++pos == end)
       return true;                  // Empty values are not allowed
   }
-  /* To make it easier for MariaDB users, we support both " and ' for quting */
+  /* To make it easier for MariaDB users, we support both " and ' for quoting */
   if (*pos == '\'' || *pos == '"')
   {
     char quote= *pos;

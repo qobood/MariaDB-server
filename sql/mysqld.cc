@@ -742,7 +742,7 @@ MYSQL_THD _current_thd() { return THR_THD; }
 void set_current_thd(THD *thd) { THR_THD= thd; }
 
 /*
-  LOCK_start_thread is used to syncronize thread start and stop with
+  LOCK_start_thread is used to synchronize thread start and stop with
   other threads.
 
   It also protects these variables:
@@ -7020,7 +7020,7 @@ struct my_option my_long_options[]=
      Like the filters, it is easier to parse from a string than to implement
      new option types. Compromises would not be necessary if the options
      parser isn't stuck with the lack of heterogenous types back in your day,
-     let alone the (in)accessiblity to C++'s @std::optional.
+     let alone the (in)accessibility to C++'s @std::optional.
    */
    &master_heartbeat_period_str, nullptr, nullptr, GET_STR|GET_AUTO,
    REQUIRED_ARG, reinterpret_cast<longlong>(master_heartbeat_period_str),
@@ -9306,7 +9306,7 @@ static int get_options(int *argc_ptr, char ***argv_ptr)
 
 /*
   Create version name for running mysqld version
-  We automaticly add suffixes -debug, -embedded and -log to the version
+  We automatically add suffixes -debug, -embedded and -log to the version
   name to make the version more descriptive.
   (MYSQL_SERVER_SUFFIX is set by the compilation environment)
 */

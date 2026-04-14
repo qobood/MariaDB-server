@@ -17,7 +17,7 @@
 # Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
 # MA 02110-1335  USA
 #
-# start initialition
+# start initialization
 #
 
 $VER = "1.0";

@@ -69,7 +69,7 @@ File my_open(const char *FileName, int Flags, myf MyFlags)
 
   SYNOPSIS
     my_close()
-      fd	File sescriptor
+      fd	File descriptor
       myf	Special Flags
 
 */

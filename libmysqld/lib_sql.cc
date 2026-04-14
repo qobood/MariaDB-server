@@ -860,7 +860,7 @@ int check_embedded_connection(MYSQL *mysql, const char *db)
   int2store(end, (ushort) mysql->charset->number);
   end+= 2;
 
-  // There is no pluging compatibility in the embedded server
+  // There is no plugging compatibility in the embedded server
   //end= strmake(end, "mysql_native_password", NAME_LEN) + 1;
 
   /* the server does the same as the client */

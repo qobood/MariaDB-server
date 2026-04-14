@@ -33,7 +33,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1335  USA */
   Implemented are
   - POSIX routines(e.g open, read, lseek ...)
   - Some ANSI C stream routines (fopen, fdopen, fileno, fclose)
-  - Windows CRT equvalients (my_get_osfhandle, open_osfhandle)
+  - Windows CRT equivalents (my_get_osfhandle, open_osfhandle)
 
   Worth to note:
   - File descriptors used here are located in a range that is not compatible 

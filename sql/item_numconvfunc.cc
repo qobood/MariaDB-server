@@ -905,7 +905,7 @@ public:
     static bool get_PR(bool *neg, LS *ls)
     {
       if (ls->length() < 2)
-        return true; // The subject string needs at least two characers
+        return true; // The subject string needs at least two characters
       char leading= ls->front();
       char trailing= ls->back();
       if (!(leading == ' ' && trailing == ' ') &&
@@ -1620,7 +1620,7 @@ public:
     {
       return A::operator bool() && B::operator bool();
     }
-    // Default ctor and initializing from its componenets
+    // Default ctor and initializing from its components
     Decimal_tail() = default;
     Decimal_tail(A && a, B && b)
      :A(std::move(a)), B(std::move(b))
@@ -1962,7 +1962,7 @@ public:
         return Fraction_body::to_LS();
       if (!Fraction_body::length())
         return Integer::to_LS();
-      // Ok to contatenate
+      // Ok to concatenate
       DBUG_ASSERT(Integer::end() < Fraction_body::ptr());
       return {Integer::ptr(), Fraction_body::end()};
     }
@@ -2119,7 +2119,7 @@ public:
     // Initializing from itself
     Unsigned_currency(Unsigned_currency &&rhs) = default;
     Unsigned_currency & operator=(Unsigned_currency && rhs) = default;
-    // Initializing from its componenents
+    // Initializing from its components
     Unsigned_currency(A && a, B && b, C && c)
      :A(std::move(a)), B(std::move(b)), C(std::move(c))
     { }
@@ -2550,7 +2550,7 @@ public:
     Unsigned_format(Unsigned_format && rhs) = default;
     Unsigned_format & operator=(Unsigned_format && rhs) = default;
 
-    // Initializing from its componenet
+    // Initializing from its components
     Unsigned_format(A && a, B && b)
      :A(std::move(a)), B(std::move(b))
     { }
@@ -3315,7 +3315,7 @@ public:
     if (args[1]->can_eval_in_optimize()) // to_number('123',const_expr)
     {
       /*
-        If args[1] is a contant, then evaluate the format, parse and cache
+        If args[1] is a constant, then evaluate the format, parse and cache
         the parsed format, to avoid its evaluation and parsing per row.
       */
       if (set_func_handler_for_const_format(thd))

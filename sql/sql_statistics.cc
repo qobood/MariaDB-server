@@ -18,7 +18,7 @@
   @file
 
   @brief
-  functions to update persitent statistical tables and to read from them
+  functions to update persistent statistical tables and to read from them
 
   @defgroup Query_Optimizer  Query Optimizer
   @{

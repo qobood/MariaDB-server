@@ -3904,7 +3904,7 @@ xb_fil_io_init()
 /** Load tablespace.
 
 @param[in] dirname directory name of the tablespace to open
-@param[in] filname file name of the tablespece to open
+@param[in] filname file name of the tablespace to open
 @param[in] is_remote true if tablespace file is .isl
 @param[in] skip_node_page0 true if we don't need to read node page 0. Otherwise
 node page0 will be read, and it's size and free pages limit

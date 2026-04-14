@@ -326,7 +326,7 @@ static void del_udf(udf_func *udf)
   {
     /*
       The functions is in use ; Rename the functions instead of removing it.
-      The functions will be automaticly removed when the least threads
+      The functions will be automatically removed when the least threads
       doesn't use it anymore
     */
     const char *name= udf->name.str;
